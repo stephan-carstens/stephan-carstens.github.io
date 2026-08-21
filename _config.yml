@@ -1,0 +1,4 @@
+title: Index
+exclude:
+  - README.md
+  - old

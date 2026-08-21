@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/stylesheets/site.css' | relative_url }}">
+</head>
+<body>
+  <div id="light"></div>
+  <div id="dark"></div>
+
+  <main>
+    <header>
+      {% if page.layout == 'article' %}
+        <a href="{{ '/' | relative_url }}">← Index</a>
+      {% else %}
+        <h1>{{ page.title | default: site.title }}</h1>
+      {% endif %}
+      <nav aria-label="Theme">
+        <a href="#light">Light</a> / <a href="#dark">Dark</a>
+      </nav>
+    </header>
+
+    <hr>
+
+    {{ content }}
+  </main>
+</body>
+</html>

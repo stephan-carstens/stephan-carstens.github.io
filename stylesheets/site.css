@@ -1,0 +1,101 @@
+:root {
+  color-scheme: dark;
+  --background: #111;
+  --foreground: #eee;
+  --muted: #999;
+}
+
+html:has(#light:target) {
+  color-scheme: light;
+  --background: #f2f2ed;
+  --foreground: #111;
+  --muted: #555;
+}
+
+html:has(#dark:target) {
+  color-scheme: dark;
+  --background: #111;
+  --foreground: #eee;
+  --muted: #999;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font: 16px/1.5 monospace;
+}
+
+#light,
+#dark {
+  display: none;
+}
+
+main {
+  width: min(56rem, 100%);
+  margin-inline: auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+h1,
+h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  text-decoration-thickness: 3px;
+}
+
+hr {
+  margin: 1rem 0;
+  border: 0;
+  border-top: 1px solid;
+}
+
+ol {
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.article-list li {
+  margin-bottom: 0.5rem;
+}
+
+.article-meta {
+  color: var(--muted);
+}
+
+.article-list .article-meta {
+  margin-left: 0.5rem;
+}
+
+article p {
+  max-width: 100%;
+}
